@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 
-@Component({
-  selector: 'app-root',
+@Component(
+  {
+  selector: 'cts-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
-})
+}
+)
+
 export class AppComponent {
-  title = 'Prafful Daga';
-  score  = 99
+  title = 'firstAngular';
+  score  = 99;
 }
