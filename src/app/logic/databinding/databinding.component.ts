@@ -9,7 +9,9 @@ export class DatabindingComponent implements OnInit {
 
   score = 88
 
-  constructor() { }
+  constructor() {
+    
+  }
 
   ngOnInit(): void {
   }
@@ -20,8 +22,12 @@ export class DatabindingComponent implements OnInit {
   }
 
   changeScore = function(){
-    console.log("changeScore called!");
-    this.score++ 
+    console.log("changeScore called! with value " + this.score);
+    ++this.score 
+  }
+
+  updateScore = function(){
+    console.log(this.score);
   }
 
 }

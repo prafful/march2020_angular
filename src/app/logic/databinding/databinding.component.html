@@ -3,8 +3,13 @@
     Score:{{ score }}
 </div>
 <div>
-    Call me: {{ callMe() }}
-</div>
+ </div>
 <div>
     <button (click)="changeScore()"> Change score</button>
+    
+</div>
+
+<div>
+   Score: <input type="text" [(ngModel)]=score> 
+   <button (click)="updateScore()">Update</button>
 </div>
