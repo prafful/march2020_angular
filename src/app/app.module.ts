@@ -12,6 +12,7 @@ import { FatherComponent } from './family/father/father.component';
 import { MotherComponent } from './family/mother/mother.component';
 import { ChildComponent } from './family/child/child.component';
 import { DatabindingComponent } from './logic/databinding/databinding.component';
+import { NotfoundComponent } from './notfound/notfound/notfound.component';
 
 @NgModule(
   {
@@ -23,7 +24,8 @@ import { DatabindingComponent } from './logic/databinding/databinding.component'
     FatherComponent, 
     MotherComponent, 
     ChildComponent, 
-    DatabindingComponent  ],
+    DatabindingComponent, 
+    NotfoundComponent  ],
   imports: [    
     BrowserModule,    
     AppRoutingModule ,

@@ -3,17 +3,16 @@
 Title: {{ title }}
 <br>
 Score: {{ score }}
-<br>
-<br>
-The child of root component is 'first' component!
-<app-first></app-first>
+
+
 <hr>
-Loading family component:
-<br>
-<cts-grandparent></cts-grandparent>
-<hr>
-Databinding:
-<br>
-<cts-databinding></cts-databinding>
+
+
+<a routerLink="/first">First</a>
+&nbsp;
+<a routerLink="/family">Family</a>
+&nbsp;
+<a routerLink="/databinding">Data Binding</a>
+
 
 <router-outlet></router-outlet>
