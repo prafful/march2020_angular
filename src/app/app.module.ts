@@ -13,6 +13,12 @@ import { MotherComponent } from './family/mother/mother.component';
 import { ChildComponent } from './family/child/child.component';
 import { DatabindingComponent } from './logic/databinding/databinding.component';
 import { NotfoundComponent } from './notfound/notfound/notfound.component';
+import { DirectiveExamplesComponent } from './directive/directive-examples/directive-examples.component';
+import { FordirectiveComponent } from './directive/fordirective/fordirective.component';
+import { IfdirectiveComponent } from './directive/ifdirective/ifdirective.component';
+import { SwitchdirectiveComponent } from './directive/switchdirective/switchdirective.component';
+import { StyledirectiveComponent } from './directive/styledirective/styledirective.component';
+import { ClassdirectiveComponent } from './directive/classdirective/classdirective.component';
 
 @NgModule(
   {
@@ -25,11 +31,19 @@ import { NotfoundComponent } from './notfound/notfound/notfound.component';
     MotherComponent, 
     ChildComponent, 
     DatabindingComponent, 
-    NotfoundComponent  ],
+    NotfoundComponent, 
+    DirectiveExamplesComponent, 
+    FordirectiveComponent, 
+    IfdirectiveComponent, 
+    SwitchdirectiveComponent, 
+    StyledirectiveComponent, 
+    ClassdirectiveComponent  
+  ],
   imports: [    
     BrowserModule,    
     AppRoutingModule ,
-    FormsModule ],
+    FormsModule 
+  ],
   providers: [],
   bootstrap: [AppComponent]
 }

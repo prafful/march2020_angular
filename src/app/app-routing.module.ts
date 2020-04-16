@@ -6,6 +6,12 @@ import { DatabindingComponent } from './logic/databinding/databinding.component'
 import { NotfoundComponent } from './notfound/notfound/notfound.component';
 import { FatherComponent } from './family/father/father.component';
 import { MotherComponent } from './family/mother/mother.component';
+import { DirectiveExamplesComponent } from './directive/directive-examples/directive-examples.component';
+import { FordirectiveComponent } from './directive/fordirective/fordirective.component';
+import { IfdirectiveComponent } from './directive/ifdirective/ifdirective.component';
+import { SwitchdirectiveComponent } from './directive/switchdirective/switchdirective.component';
+import { StyledirectiveComponent } from './directive/styledirective/styledirective.component';
+import { ClassdirectiveComponent } from './directive/classdirective/classdirective.component';
 
 
 const routes: Routes = [
@@ -40,6 +46,33 @@ const routes: Routes = [
   {
     path:'databinding',
     component:DatabindingComponent
+  },
+  {
+    path:'directive',
+    component:DirectiveExamplesComponent,
+    children:[
+      {
+        path:'for',
+        component:FordirectiveComponent
+      },
+      {
+        path:'if',
+        component:IfdirectiveComponent
+      },
+      {
+        path:'switch',
+        component:SwitchdirectiveComponent
+      },
+      {
+        path:'style',
+        component:StyledirectiveComponent
+      },
+      {
+        path:'class',
+        component:ClassdirectiveComponent
+      }
+
+    ]
   },
   {
     path:'**',
