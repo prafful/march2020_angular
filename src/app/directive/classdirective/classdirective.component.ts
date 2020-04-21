@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClassdirectiveComponent implements OnInit {
 
+  status: boolean = true
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleClass =()=>{
+    this.status = this.status==true ? false:true
+    console.log(this.status);
   }
 
 }

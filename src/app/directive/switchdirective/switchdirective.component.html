@@ -1,1 +1,51 @@
 <p>switchdirective works!</p>
+
+<div>
+    Demo of ngSwitchCase:
+    <br><br>
+    <input type="text" 
+        placeholder="prafful, adi or anything!" 
+        [(ngModel)]="friend"
+        >
+        <br>
+    Friend: {{friend}}
+    <br><br>
+    <div [ngSwitch]="friend">
+        <span *ngSwitchCase="''">
+            <div style="width: 100px; 
+                        height: 100px; 
+                        background-color: darkkhaki;
+                        text-align: center;">
+            Blank!
+            </div>
+        </span>
+
+        <span *ngSwitchCase="'prafful'">
+            <div style="width: 100px; 
+                        height: 100px; 
+                        background-color: greenyellow;
+                        text-align: center;">
+            PD!
+            </div>
+        </span>
+
+        <span *ngSwitchCase="'adi'">
+            <div style="width: 100px; 
+                        height: 100px; 
+                        background-color: palevioletred;
+                        text-align: center;">
+            AD!
+            </div>
+        </span>
+        <span *ngSwitchDefault>
+            <div style="width: 100px; 
+                        height: 100px; 
+                        background-color: red;
+                        text-align: center;">
+            Alien!
+            </div>
+        </span>
+
+
+    </div>
+</div>

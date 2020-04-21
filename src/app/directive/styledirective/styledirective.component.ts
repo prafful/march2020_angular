@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StyledirectiveComponent implements OnInit {
 
+  status: number =14
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  getColor =()=>{
+    if(this.status >= 5){
+      return "green"
+    }else{
+      return "pink"
+    }
+  }
+
 
 }
