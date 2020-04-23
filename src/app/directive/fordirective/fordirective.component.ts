@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FordirectiveComponent implements OnInit {
 
+  name:string = "PraFFul"
+
   startups =['OBBO', 'MLANN', 'OWIOH', 'BNP']
 
   users = [

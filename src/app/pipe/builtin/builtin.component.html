@@ -1,0 +1,37 @@
+<p>builtin works!</p>
+
+Message: {{message}}
+<br>
+Message (uppercase):{{message | uppercase}}
+<br> 
+Message (lowercase):{{message | lowercase}} 
+<br>
+Message (titlecase):{{message | titlecase}} 
+<br>
+Amount: {{amount | currency}}
+<br>
+Amount: {{amount | currency:'INR'}}
+<br>
+Amount: {{amount | currency:'JPY'}}
+<br>
+Amount: {{amount | currency:'EUR'}}
+<br>
+Date: {{currentdate}}
+<br>
+Birthdate: {{birthdate}}
+<br>
+Date (date): {{currentdate | date}}
+<br>
+Date (date - longdate ): {{currentdate | date:'longDate'}}
+<br>
+Date (date - shortdate ): {{currentdate | date:'shortDate'}}
+<br>
+Date (date - fulldate ): {{currentdate | date:'fullDate' | uppercase}}
+<br>
+Date (M ): {{currentdate | date:'M'}}
+<br>
+Date (MM ): {{currentdate | date:'MM'}}
+<br>
+Date (Weekday ): {{currentdate | date:'EEEE'}}
+<br>
+Date (Second ): {{currentdate | date:'ss'}}

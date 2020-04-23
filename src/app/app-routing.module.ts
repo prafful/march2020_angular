@@ -12,6 +12,9 @@ import { IfdirectiveComponent } from './directive/ifdirective/ifdirective.compon
 import { SwitchdirectiveComponent } from './directive/switchdirective/switchdirective.component';
 import { StyledirectiveComponent } from './directive/styledirective/styledirective.component';
 import { ClassdirectiveComponent } from './directive/classdirective/classdirective.component';
+import { AllpipesComponent } from './pipe/allpipes/allpipes.component';
+import { BuiltinComponent } from './pipe/builtin/builtin.component';
+import { CustomComponent } from './pipe/custom/custom.component';
 
 
 const routes: Routes = [
@@ -74,6 +77,21 @@ const routes: Routes = [
 
     ]
   },
+  {
+    path:'pipe',
+    component:AllpipesComponent,
+    children:[
+      {
+        path:'builtin',
+        component:BuiltinComponent
+      },
+      {
+        path:'custom',
+        component:CustomComponent
+      }
+    ]
+  },
+
   {
     path:'**',
     component:NotfoundComponent

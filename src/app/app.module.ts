@@ -19,6 +19,11 @@ import { IfdirectiveComponent } from './directive/ifdirective/ifdirective.compon
 import { SwitchdirectiveComponent } from './directive/switchdirective/switchdirective.component';
 import { StyledirectiveComponent } from './directive/styledirective/styledirective.component';
 import { ClassdirectiveComponent } from './directive/classdirective/classdirective.component';
+import { AllpipesComponent } from './pipe/allpipes/allpipes.component';
+import { BuiltinComponent } from './pipe/builtin/builtin.component';
+import { CustomComponent } from './pipe/custom/custom.component';
+import { SortstringPipe } from './custompipe/sortstring.pipe';
+import { NumbersortPipe } from './custompipe/numbersort.pipe';
 
 @NgModule(
   {
@@ -37,7 +42,11 @@ import { ClassdirectiveComponent } from './directive/classdirective/classdirecti
     IfdirectiveComponent, 
     SwitchdirectiveComponent, 
     StyledirectiveComponent, 
-    ClassdirectiveComponent  
+    ClassdirectiveComponent, 
+    AllpipesComponent, 
+    BuiltinComponent, 
+    CustomComponent, 
+    SortstringPipe, NumbersortPipe  
   ],
   imports: [    
     BrowserModule,    
