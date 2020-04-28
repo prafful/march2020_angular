@@ -24,6 +24,11 @@ import { BuiltinComponent } from './pipe/builtin/builtin.component';
 import { CustomComponent } from './pipe/custom/custom.component';
 import { SortstringPipe } from './custompipe/sortstring.pipe';
 import { NumbersortPipe } from './custompipe/numbersort.pipe';
+import { ConsumeallComponent } from './consume/consumeall/consumeall.component';
+import { LocaloneComponent } from './consume/localone/localone.component';
+import { LocaltwoComponent } from './consume/localtwo/localtwo.component';
+import { LocalthreeComponent } from './consume/localthree/localthree.component';
+
 
 @NgModule(
   {
@@ -46,7 +51,8 @@ import { NumbersortPipe } from './custompipe/numbersort.pipe';
     AllpipesComponent, 
     BuiltinComponent, 
     CustomComponent, 
-    SortstringPipe, NumbersortPipe  
+    SortstringPipe, 
+    NumbersortPipe, ConsumeallComponent, LocaloneComponent, LocaltwoComponent, LocalthreeComponent  
   ],
   imports: [    
     BrowserModule,    

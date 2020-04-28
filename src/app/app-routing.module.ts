@@ -15,6 +15,10 @@ import { ClassdirectiveComponent } from './directive/classdirective/classdirecti
 import { AllpipesComponent } from './pipe/allpipes/allpipes.component';
 import { BuiltinComponent } from './pipe/builtin/builtin.component';
 import { CustomComponent } from './pipe/custom/custom.component';
+import { ConsumeallComponent } from './consume/consumeall/consumeall.component';
+import { LocaloneComponent } from './consume/localone/localone.component';
+import { LocaltwoComponent } from './consume/localtwo/localtwo.component';
+import { LocalthreeComponent } from './consume/localthree/localthree.component';
 
 
 const routes: Routes = [
@@ -88,6 +92,24 @@ const routes: Routes = [
       {
         path:'custom',
         component:CustomComponent
+      }
+    ]
+  },
+  {
+    path:'service',
+    component:ConsumeallComponent,
+    children:[
+      {
+        path:'localone',
+        component:LocaloneComponent
+      },
+      {
+        path:'localtwo',
+        component:LocaltwoComponent
+      },
+      {
+        path:'localthree',
+        component:LocalthreeComponent
       }
     ]
   },
