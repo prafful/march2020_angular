@@ -19,6 +19,8 @@ import { ConsumeallComponent } from './consume/consumeall/consumeall.component';
 import { LocaloneComponent } from './consume/localone/localone.component';
 import { LocaltwoComponent } from './consume/localtwo/localtwo.component';
 import { LocalthreeComponent } from './consume/localthree/localthree.component';
+import { AllComponent } from './remotecomponent/all/all.component';
+import { ConsumehttpComponent } from './remotecomponent/consumehttp/consumehttp.component';
 
 
 const routes: Routes = [
@@ -110,6 +112,16 @@ const routes: Routes = [
       {
         path:'localthree',
         component:LocalthreeComponent
+      }
+    ]
+  },
+  {
+    path:'all',
+    component:AllComponent,
+    children:[
+      {
+        path:'consumehttp',
+        component:ConsumehttpComponent
       }
     ]
   },

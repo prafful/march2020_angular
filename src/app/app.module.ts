@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,6 +29,8 @@ import { ConsumeallComponent } from './consume/consumeall/consumeall.component';
 import { LocaloneComponent } from './consume/localone/localone.component';
 import { LocaltwoComponent } from './consume/localtwo/localtwo.component';
 import { LocalthreeComponent } from './consume/localthree/localthree.component';
+import { AllComponent } from './remotecomponent/all/all.component';
+import { ConsumehttpComponent } from './remotecomponent/consumehttp/consumehttp.component';
 
 
 @NgModule(
@@ -52,12 +55,19 @@ import { LocalthreeComponent } from './consume/localthree/localthree.component';
     BuiltinComponent, 
     CustomComponent, 
     SortstringPipe, 
-    NumbersortPipe, ConsumeallComponent, LocaloneComponent, LocaltwoComponent, LocalthreeComponent  
+    NumbersortPipe, 
+    ConsumeallComponent, 
+    LocaloneComponent, 
+    LocaltwoComponent, 
+    LocalthreeComponent, 
+    AllComponent, 
+    ConsumehttpComponent  
   ],
   imports: [    
     BrowserModule,    
     AppRoutingModule ,
-    FormsModule 
+    FormsModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
