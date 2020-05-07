@@ -9,12 +9,9 @@ export class RemoteService {
   constructor(private http:HttpClient) { }
 
   getAllUsers(){
-    return this.http.get("https://jsonplaceholder.typicode.com/users")
+    return this.http.get("http://localhost:3000/allfriends")
   }
 
-  getAllEmployees(){
-    return this.http.get("http://dummy.restapiexample.com/api/v1/employees")
-  }
 
 
 }

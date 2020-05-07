@@ -1,18 +1,42 @@
 <p>consumehttp works!</p>
 
 Users:
-<br><br>
-<ol>
-    <li *ngFor="let user of users">
-        {{user.name}}
-    </li>
-</ol>
 
+<button>Add New Friend</button>
+&nbsp;
+
+<button>Add New Friend In New Page</button>
 <br><br>
-Employees:
-<br>
-<ol>
-    <li *ngFor="let employee of employeees">
-        {{employee.employee_name}} at age of {{ employee.employee_age }}
-    </li>
-</ol>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Score</th>
+            <th colspan="2">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let friend of friends">
+            <td>{{friend.id}}</td>
+            <td>{{friend.name}} </td>
+            <td>{{friend.location}} </td>
+            <td>{{friend.score}}  </td>
+            <td>
+                <button>Edit</button>
+            </td>
+            <td>
+                <button>Delete</button>
+            </td>
+
+
+        </tr>
+
+    </tbody>
+
+
+  
+</table>
+
+

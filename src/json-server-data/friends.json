@@ -1,0 +1,16 @@
+{
+    "allfriends":[
+        {
+            "id":1,
+            "name":"OBB",
+            "location":"Chennai",
+            "score":8
+        },
+        {
+            "id":2,
+            "name":"MMLANN",
+            "location":"Tokyo",
+            "score":10
+        }
+    ]
+}

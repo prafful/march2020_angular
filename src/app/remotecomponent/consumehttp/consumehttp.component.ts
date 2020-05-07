@@ -9,7 +9,7 @@ import { RemoteService } from 'src/app/service/remote.service';
 })
 export class ConsumehttpComponent implements OnInit {
 
-  users:any = null
+  friends:any = null
   employeees: any = null
 
   constructor(private remote:RemoteService) { }
@@ -18,18 +18,12 @@ export class ConsumehttpComponent implements OnInit {
 
     this.remote.getAllUsers().subscribe(success=>{
       console.log(success);
-      this.users = success
+      this.friends = success
     }, error=>{
       console.log(error);
     })
 
-    this.remote.getAllEmployees().subscribe(success=>{
-      console.log(success);
-      this.employeees = success.data
-    }, error=>{
-      console.log(error);
-    })
-
+    
   }
 
 
