@@ -20,5 +20,12 @@ export class RemoteService {
     return this.http.delete("http://localhost:3000/allfriends" + "/" + id)
   }
 
+  getFriendById(id){
+    return this.http.get("http://localhost:3000/allfriends" + "/" + id)
+  }
+
+  updateFriendById(friend){
+    return this.http.put("http://localhost:3000/allfriends" + "/" + friend.id, friend)
+  }
 
 }

@@ -9,16 +9,54 @@ import { RemoteService } from 'src/app/service/remote.service';
 })
 export class ConsumehttpComponent implements OnInit {
 
+  id: number = 0
   friends:any = null
   name: string = null
   location: string = null
   score:number=null
   newFriendFormStatus:boolean = false
+  editFriendFormStatus: boolean = false
 
   constructor(private remote:RemoteService) { }
 
   displayAddNewFriend(){
-    this.newFriendFormStatus = this.newFriendFormStatus == false ? true: false
+    this.newFriendFormStatus = this.newFriendFormStatus == false ? true:false
+  }
+
+  displayEditFriend(friend){
+    
+    if(this.editFriendFormStatus == false){
+      this.editFriendFormStatus = true
+    }
+
+    console.log("Edit friend with ID: " + friend.id);
+    this.remote.getFriendById(friend.id).subscribe(response=>{
+      console.log(response);
+      this.name = response.name
+      this.location = response.location
+      this.score = response.score
+      this.id = response.id
+    }, error=>{
+      console.log(error);
+    })
+  }
+
+  editFriend(friend){
+    console.log(friend.value);
+    this.remote.updateFriendById(friend.value)
+                .subscribe(response=>{
+                  console.log(response);
+                  this.name = null
+                  this.location = null
+                  this.score = null
+                  this.id = null
+                  this.editFriendFormStatus = false
+                  this.getAllFriends()
+
+                }, error=>{
+                  console.log(error);
+                })
+
   }
 
   getAllFriends(){
@@ -43,6 +81,7 @@ setNewFriend(friendform){
               this.name = ""
               this.location = ""
               this.score = 0
+              this.newFriendFormStatus = false
               this.getAllFriends()
             }, error=>{
               console.log(error);

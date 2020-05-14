@@ -2,10 +2,10 @@
 
 Users:
 
-<button (click)="displayAddNewFriend()">Add New Friend</button>
+<button (click)="displayAddNewFriend()" [disabled]="editFriendFormStatus">Add New Friend</button>
 &nbsp;
 
-<button>Add New Friend In New Page</button>
+<button [disabled]="editFriendFormStatus">Add New Friend In New Page</button>
 <br><br>
 <div *ngIf="newFriendFormStatus">
     <form #addFriendForm="ngForm" (ngSubmit)="setNewFriend(addFriendForm)" >
@@ -14,8 +14,16 @@ Users:
         Score: <input type="number" name="score" [(ngModel)]="score" required> <br>
         <button type="submit" [disabled]="addFriendForm.invalid">Add</button>
     </form>
-    
+</div>
 
+<div *ngIf="editFriendFormStatus">
+    <form #editFriendForm="ngForm" (ngSubmit)="editFriend(editFriendForm)" >
+        Id: <input type="number" name="id" [(ngModel)]="id" readonly> <br>
+        Name: <input type="text" name="name" [(ngModel)]="name" required> <br>
+        Location: <input type="text" name="location" [(ngModel)]="location" required> <br>
+        Score: <input type="number" name="score" [(ngModel)]="score" required> <br>
+        <button type="submit" [disabled]="editFriendForm.invalid">Edit</button>
+    </form>
 </div>
 <br>
 <table border="1">
@@ -35,10 +43,10 @@ Users:
             <td>{{friend.location}} </td>
             <td>{{friend.score}}  </td>
             <td>
-                <button>Edit In Same Page</button>
+                <button (click)="displayEditFriend(friend)" [disabled]="newFriendFormStatus">Edit In Same Page</button>
             </td>
             <td>
-                <button>Edit In New Page</button>
+                <button [disabled]="newFriendFormStatus">Edit In New Page</button>
             </td>
             
             <td>
