@@ -1,0 +1,21 @@
+<p>editfriend works!</p>
+
+<h1>Edit friend with ID: {{ friendid }}</h1>
+
+<div >
+    <form #editFriendForm="ngForm" (ngSubmit)="editFriend(editFriendForm)" >
+        Id: <input type="number" name="id" [(ngModel)]="id" readonly> <br>
+        Name: <input type="text" name="name" [(ngModel)]="name" required> <br>
+        Location: <input type="text" name="location" [(ngModel)]="location" required> <br>
+        Score: <input type="number" name="score" [(ngModel)]="score" required> <br>
+        <button type="submit" [disabled]="editFriendForm.invalid">Edit</button>
+    </form>
+</div>
+
+<br>
+<br>
+<br>
+
+
+
+<button (click)="goBackSimon()">Back</button>

@@ -7,18 +7,6 @@
       "score": 8
     },
     {
-      "id": 2,
-      "name": "MMLANN",
-      "location": "Tokyo",
-      "score": 10
-    },
-    {
-      "id": 4,
-      "name": "BBNPBB",
-      "location": "South Mumbai",
-      "score": 90
-    },
-    {
       "id": 5,
       "name": "OWIOH",
       "location": "Ahmedabad",
@@ -26,20 +14,32 @@
     },
     {
       "id": 6,
-      "name": "Yuko",
+      "name": "Yuko San",
       "location": "Tokyo",
       "score": 20
     },
     {
-      "id": 9,
-      "name": "MikaSan",
-      "location": "Korea",
+      "id": 7,
+      "name": "Kato San",
+      "location": "Japan",
       "score": 8
     },
     {
-      "id": 17,
-      "name": "Niaa",
-      "location": "Assam",
+      "name": "Das",
+      "location": "Kolkatta",
+      "score": 8,
+      "id": 8
+    },
+    {
+      "id": 9,
+      "name": "Visitor",
+      "location": "Chennai",
+      "score": 2
+    },
+    {
+      "id": 10,
+      "name": "AI",
+      "location": "South Africa",
       "score": 8
     }
   ]

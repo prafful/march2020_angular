@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { RemoteService } from 'src/app/service/remote.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'cts-consumehttp',
@@ -9,6 +10,7 @@ import { RemoteService } from 'src/app/service/remote.service';
 })
 export class ConsumehttpComponent implements OnInit {
 
+  response:any = []
   id: number = 0
   friends:any = null
   name: string = null
@@ -17,7 +19,7 @@ export class ConsumehttpComponent implements OnInit {
   newFriendFormStatus:boolean = false
   editFriendFormStatus: boolean = false
 
-  constructor(private remote:RemoteService) { }
+  constructor(private remote:RemoteService, private router: Router) { }
 
   displayAddNewFriend(){
     this.newFriendFormStatus = this.newFriendFormStatus == false ? true:false
@@ -102,5 +104,14 @@ setNewFriend(friendform){
 
     }
 
+
+    openAddNewFriendComponentView(){
+      this.router.navigate(["/addnewfriend"])
+    }
+
+    openEditFriendComponentView(friend){
+      console.log(friend.id);
+      this.router.navigate(["/editfriend", friend.id ])
+    }
 
 }

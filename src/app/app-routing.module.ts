@@ -21,6 +21,8 @@ import { LocaltwoComponent } from './consume/localtwo/localtwo.component';
 import { LocalthreeComponent } from './consume/localthree/localthree.component';
 import { AllComponent } from './remotecomponent/all/all.component';
 import { ConsumehttpComponent } from './remotecomponent/consumehttp/consumehttp.component';
+import { AddnewfriendComponent } from './remotecomponent/addnewfriend/addnewfriend.component';
+import { EditfriendComponent } from './remotecomponent/editfriend/editfriend.component';
 
 
 const routes: Routes = [
@@ -125,7 +127,14 @@ const routes: Routes = [
       }
     ]
   },
-
+  {
+    path:'addnewfriend',
+    component:AddnewfriendComponent
+  },
+  {
+    path:'editfriend/:myid',
+    component:EditfriendComponent
+  },
   {
     path:'**',
     component:NotfoundComponent

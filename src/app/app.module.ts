@@ -31,6 +31,8 @@ import { LocaltwoComponent } from './consume/localtwo/localtwo.component';
 import { LocalthreeComponent } from './consume/localthree/localthree.component';
 import { AllComponent } from './remotecomponent/all/all.component';
 import { ConsumehttpComponent } from './remotecomponent/consumehttp/consumehttp.component';
+import { AddnewfriendComponent } from './remotecomponent/addnewfriend/addnewfriend.component';
+import { EditfriendComponent } from './remotecomponent/editfriend/editfriend.component';
 
 
 @NgModule(
@@ -61,7 +63,7 @@ import { ConsumehttpComponent } from './remotecomponent/consumehttp/consumehttp.
     LocaltwoComponent, 
     LocalthreeComponent, 
     AllComponent, 
-    ConsumehttpComponent  
+    ConsumehttpComponent, AddnewfriendComponent, EditfriendComponent  
   ],
   imports: [    
     BrowserModule,    

@@ -5,7 +5,7 @@ Users:
 <button (click)="displayAddNewFriend()" [disabled]="editFriendFormStatus">Add New Friend</button>
 &nbsp;
 
-<button [disabled]="editFriendFormStatus">Add New Friend In New Page</button>
+<button [disabled]="editFriendFormStatus" (click)="openAddNewFriendComponentView()">Add New Friend In New Page</button>
 <br><br>
 <div *ngIf="newFriendFormStatus">
     <form #addFriendForm="ngForm" (ngSubmit)="setNewFriend(addFriendForm)" >
@@ -46,7 +46,7 @@ Users:
                 <button (click)="displayEditFriend(friend)" [disabled]="newFriendFormStatus">Edit In Same Page</button>
             </td>
             <td>
-                <button [disabled]="newFriendFormStatus">Edit In New Page</button>
+                <button (click)="openEditFriendComponentView(friend)"  [disabled]="newFriendFormStatus" >Edit In New Page</button>
             </td>
             
             <td>
