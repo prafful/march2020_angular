@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -33,6 +34,7 @@ import { AllComponent } from './remotecomponent/all/all.component';
 import { ConsumehttpComponent } from './remotecomponent/consumehttp/consumehttp.component';
 import { AddnewfriendComponent } from './remotecomponent/addnewfriend/addnewfriend.component';
 import { EditfriendComponent } from './remotecomponent/editfriend/editfriend.component';
+import { TextanimateComponent } from './animation/textanimate/textanimate.component';
 
 
 @NgModule(
@@ -63,13 +65,14 @@ import { EditfriendComponent } from './remotecomponent/editfriend/editfriend.com
     LocaltwoComponent, 
     LocalthreeComponent, 
     AllComponent, 
-    ConsumehttpComponent, AddnewfriendComponent, EditfriendComponent  
+    ConsumehttpComponent, AddnewfriendComponent, EditfriendComponent, TextanimateComponent  
   ],
   imports: [    
     BrowserModule,    
     AppRoutingModule ,
     FormsModule,
-    HttpClientModule 
+    HttpClientModule,
+    BrowserAnimationsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
